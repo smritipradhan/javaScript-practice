@@ -30,3 +30,10 @@ https://www.codewars.com/kata/57a5b0dfcf1fa526bb000118/solutions
 function distinct(a) {
   return [...new Set(a)];
 }
+
+### Array Diff
+https://www.codewars.com/kata/523f5d21c841566fde000009/train/javascript
+function arrayDiff(a, b) {
+  var difference = a.filter(x => b.indexOf(x) === -1);
+  return difference
+}
