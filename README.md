@@ -104,3 +104,16 @@ for (var i=0; i<arr.length; i++){
   }
 return count;
 }
+
+Write Number in Expanded Form
+
+https://www.codewars.com/kata/5842df8ccbd22792a4000245/javascript
+```sh
+const expandedForm = n => n.toString()
+                            .split("")
+                            .reverse()
+                            .map( (a, i) => a * Math.pow(10, i))
+                            .filter(a => a > 0)
+                            .reverse()
+                            .join(" + ");
+```
