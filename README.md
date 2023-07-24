@@ -37,3 +37,70 @@ function arrayDiff(a, b) {
   var difference = a.filter(x => b.indexOf(x) === -1);
   return difference
 }
+
+Date : 23rd July 2023
+### Find Even in odd or vice vers
+https://www.codewars.com/kata/5526fc09a1bbd946250002dc/solutions/javascript
+
+function findOutlier(int){
+  var even = int.filter(a=>a%2==0);
+  var odd = int.filter(a=>a%2!==0);
+  return even.length==1? even[0] : odd[0];
+}
+
+### Printer Errors
+https://www.codewars.com/kata/56541980fa08ab47a0000040/javascript
+
+function printerError(s) {
+    // your code
+    var count = 0;
+    for(var i = 0; i < s.length; i++) {
+      if (s[i] > "m") {
+        count++;
+      }
+    }
+    return count+"/"+s.length;
+}
+
+function printerError(s) {
+    
+    let numerator = 0;
+    for(let i=0;i<s.length;i++)
+      {
+        if(s.charCodeAt(i) < 97 || s.charCodeAt(i) >109)
+          {
+            numerator = numerator +1;
+          }
+      }
+      return `${numerator}/${s.length}`
+}
+
+
+function persistence(num) {
+   
+  let times = 0;
+  
+  num = num.toString();
+  
+  while(num.length>1)
+    {
+    times++;
+     num = num.split('').map(Number).reduce((a,b)=>a*b).toString();
+    }
+  return times;
+}
+### Smileys
+https://www.codewars.com/kata/583203e6eb35d7980400002a/solutions
+function countSmileys(arr) {
+var smileys = [":)",";)",":-)",";-)",";~)",":~)",":D",";D",":-D",":~D",";-D",";~D"];
+var count = 0;
+
+for (var i=0; i<arr.length; i++){
+  for (var j=0; j<smileys.length; j++){
+    if (arr[i]===smileys[j]){
+      count++;
+    }
+  }
+  }
+return count;
+}
